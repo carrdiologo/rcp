@@ -509,7 +509,7 @@ const PREGUNTAS=[
   '¿Qué tan útil fue el metrónomo?',
   '¿Qué tan completo te resultó el registro final?'
 ];
-const ON=/^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(ENDPOINT.trim());
+const ON=/^https:\/\/script\.google\.com\/(a\/macros\/[^/]+|macros)\/s\/[^/]+\/exec$/.test(ENDPOINT.trim());
 const QKEY='rcp-envios-v1',DKEY='rcp-dispositivo-v1';
 let dev=load(DKEY);
 if(!dev){dev=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);store(DKEY,dev)}
